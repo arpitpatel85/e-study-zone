@@ -19,7 +19,7 @@ const Register = () => {
         e.preventDefault();
         try {
             const res = await axios.post('https://e-study-zone.onrender.com/api/user/register', data);
-            window.alert(res.data.msg);
+            window.alert("Registered Successgully");
         }
         catch (er) {
             console.log(er)
