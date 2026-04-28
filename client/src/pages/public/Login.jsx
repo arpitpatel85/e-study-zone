@@ -15,7 +15,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:5000/api/user/login",data);
+      const res = await axios.post("https://e-study-zone.onrender.com/api/user/login",data);
       alert(res.data.msg);
       if(res.data.msg="Login Succesfully"){
         localStorage.setItem("name",res.data.data.name)
@@ -38,21 +38,21 @@ const Login = () => {
   };
 
   return (
-    <div className="container-fluid vh-100 bg-light">
+   <div className="container-fluid vh-100 bg-light">
   <div className="row h-100">
     {/* Left Side - Welcome Section */}
-   <div className="col-md-6 welcome-box d-flex flex-column justify-content-center align-items-center text-white p-5">
-  <h1 className="mb-4">WELCOME TO E STUDY ZONE</h1>
-  <p className="lead text-center">
-    We’re glad to see you again. Log in to continue exploring our platform.
-    <br />
-    Your journey to success begins with one click on E-Study
-  </p>
-</div>
+    <div className="col-12 col-md-6 welcome-box d-flex flex-column justify-content-center align-items-center text-white p-5">
+      <h1 className="mb-4 text-center text-md-start">WELCOME TO E STUDY ZONE</h1>
+      <p className="lead text-center text-md-start">
+        We’re glad to see you again. Log in to continue exploring our platform.
+        <br />
+        Your journey to success begins with one click on E-Study
+      </p>
+    </div>
 
     {/* Right Side - Login Form */}
-    <div className="col-md-6 d-flex justify-content-center align-items-center boxx">
-      <div className="box p-4 rounded w-75">
+    <div className="col-12 col-md-6 d-flex justify-content-center align-items-center boxx">
+      <div className="box p-4 rounded w-100 w-md-75 shadow-sm">
         <h2 className="text-center mb-4">Login</h2>
 
         <form onSubmit={handleSubmit}>
@@ -104,6 +104,7 @@ const Login = () => {
     </div>
   </div>
 </div>
+
 
   );
 };

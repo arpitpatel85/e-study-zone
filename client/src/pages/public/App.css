@@ -1,58 +1,102 @@
 body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
 }
-.boxx{
+
+/* Gradient background for right side */
+.boxx {
   background: linear-gradient(
-  to left,
-  rgba(97, 159, 220, 0.824),
-  rgba(171, 48, 95, 0.829)
-);
-
+    to left,
+    rgba(97, 159, 220, 0.824),
+    rgba(171, 48, 95, 0.829)
+  );
+  min-height: 100vh; /* ensures full height on mobile */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem; /* spacing for small screens */
 }
 
+/* Glassmorphism login box */
 .box {
-    width: 100%;
-    max-width: 500px;
-    background-color: rgba(32, 144, 209, 0.2); /* हल्का transparent */
-    border-radius: 12px;
-    backdrop-filter: blur(10px); /* blur effect */
-    -webkit-backdrop-filter: blur(10px); /* Safari support */
-    box-shadow: 0 10px 30px rgba(12, 11, 11, 0.2); /* depth */
-    border: 1px solid rgba(255, 255, 255, 0.3); /* subtle border */
+  width: 100%;
+  max-width: 500px;
+  background-color: rgba(32, 144, 209, 0.2);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 10px 30px rgba(12, 11, 11, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 2rem;
 }
 
-
+/* Heading styling */
 .box h2 {
-    font-size: 2rem;
-    font-weight: 700;
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
 }
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .welcome-box {
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+
+  .box {
+    max-width: 100%;
+    padding: 1.5rem;
+  }
+
+  .box h2 {
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .box {
+    padding: 1rem;
+  }
+
+  .box h2 {
+    font-size: 1.5rem;
+  }
+}
+
+
 #qualification {
-  border: 1px solid #6c757d;   /* subtle gray border */
-  background-color: #f8f9fa;   /* soft background */
+  border: 1px solid #6c757d;
+  /* subtle gray border */
+  background-color: #f8f9fa;
+  /* soft background */
   transition: all 0.3s ease;
 }
 
 #qualification:hover {
-  border-color: #343a40;       /* darker border on hover */
-  box-shadow: 0 0 8px rgba(0,0,0,0.2); /* elegant glow */
+  border-color: #343a40;
+  /* darker border on hover */
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+  /* elegant glow */
 }
 
 #qualification:focus {
-  border-color: #0d6efd;       /* Bootstrap primary blue */
-  box-shadow: 0 0 10px rgba(13,110,253,0.5);
+  border-color: #0d6efd;
+  /* Bootstrap primary blue */
+  box-shadow: 0 0 10px rgba(13, 110, 253, 0.5);
 }
+
 .welcome-box {
-  background: 
-    linear-gradient( to right
-    ,rgba(97, 159, 220, 0.824), rgba(171, 48, 95, 0.829)),
+  background:
+    linear-gradient(to right, rgba(97, 159, 220, 0.824), rgba(171, 48, 95, 0.829)),
     url('https://images.unsplash.com/photo-1523240795612-9a054b0db644');
 
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 
-  min-height: 100vh; /* full height */
+  min-height: 100vh;
+  /* full height */
 }

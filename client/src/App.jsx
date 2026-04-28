@@ -35,17 +35,17 @@ const App = () => {
               <Route path='changepassword' element={<ChangePassword />}></Route>
               <Route path='trainerprofile' element={<Profile />}></Route>
               <Route path='content' element={<Content />}></Route>
-              <Route path='handshake' element={<Handshake/>}></Route>
-            
+              <Route path='handshake' element={<Handshake />}></Route>
+
             </Route>
             {/* trainer Dash board start */}
 
             {/* user Dash board start */}
             <Route path='/userdashboard' element={<UserDashboard />}>
               <Route path='userprofile' element={<UserProfile />}></Route>
-              <Route path='changepassword' element={<ChangePassword/>}></Route>
-                 <Route path='handshake' element={<Handshake/>}></Route>
-                 <Route path='course' element={<Course/>}></Route>
+              <Route path='changepassword' element={<ChangePassword />}></Route>
+              <Route path='handshake' element={<Handshake />}></Route>
+              <Route path='course' element={<Course />}></Route>
             </Route>
             {/* user Dash board end */}
 
